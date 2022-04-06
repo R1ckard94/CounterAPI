@@ -7,11 +7,11 @@ namespace CountedAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BooksController : ControllerBase
+    public class CountedController : ControllerBase
     {
         private readonly CountedService _countedService;
 
-        public BooksController(CountedService countedService)
+        public CountedController(CountedService countedService)
         {
             _countedService = countedService;
         }
@@ -38,35 +38,35 @@ namespace CountedAPI.Controllers
         {
             _countedService.Create(countedDay);
 
-            return CreatedAtRoute("GetBook", new { id = countedDay.Id.ToString() }, countedDay);
+            return CreatedAtRoute("GetDay", new { date = countedDay.Date }, countedDay);
         }
 
-        [HttpPut("{id:length(24)}")]
-        public IActionResult Update(string id, CountDay countedDayIn)
+        [HttpPut("{date}")]
+        public IActionResult Update(string date, CountDay countedDayIn)
         {
-            var countedDay = _countedService.Get(id);
+            var countedDay = _countedService.Get(date);
 
             if (countedDay == null)
             {
                 return NotFound();
             }
 
-            _countedService.Update(id, countedDayIn);
+            _countedService.Update(date, countedDayIn);
 
             return NoContent();
         }
 
-        [HttpDelete("{id:length(24)}")]
-        public IActionResult Delete(string id)
+        [HttpDelete("{date}")]
+        public IActionResult Delete(string date)
         {
-            var countedDay = _countedService.Get(id);
+            var countedDay = _countedService.Get(date);
 
             if (countedDay == null)
             {
                 return NotFound();
             }
 
-            _countedService.Remove(id);
+            _countedService.Remove(date);
 
             return NoContent();
         }

@@ -14,28 +14,28 @@ namespace CounterAPI.Services
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _countedDay = database.GetCollection<CountDay>(settings.CountedCollectionName);
+            _countedDay = database.GetCollection<CountDay>(settings.CountedPeopleCollectionName);
         }
 
         public List<CountDay> Get() =>
             _countedDay.Find(counted => true).ToList();
 
-        public CountDay Get(string id) =>
-            _countedDay.Find<CountDay>(counted => counted.Id == id).FirstOrDefault();
+        public CountDay Get(string date) =>
+            _countedDay.Find(counted => counted.Date.Equals(date)).FirstOrDefault();
 
-        public CountDay Create(CountDay count)
+        public CountDay Create(CountDay count) 
         {
             _countedDay.InsertOne(count);
             return count;
         }
 
-        public void Update(string id, CountDay countedIn) =>
-            _countedDay.ReplaceOne(counted => counted.Id == id, countedIn);
+        public void Update(string date, CountDay countedIn) =>
+            _countedDay.ReplaceOne(counted => counted.Date.Equals(date), countedIn);
 
         public void Remove(CountDay countedIn) =>
             _countedDay.DeleteOne(counted => counted.Id == countedIn.Id);
 
-        public void Remove(string id) =>
-            _countedDay.DeleteOne(counted => counted.Id == id);
+        public void Remove(string date) =>
+            _countedDay.DeleteOne(counted => counted.Date.Equals(date));
     }
 }

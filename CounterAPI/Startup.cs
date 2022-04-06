@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using CounterAPI.Models;
-using CountedApi.Services;
+using CounterAPI.Services;
 
 namespace CounterAPI
 {
