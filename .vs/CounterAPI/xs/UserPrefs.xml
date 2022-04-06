@@ -1,23 +1,27 @@
 ﻿<Properties StartupConfiguration="{F4AAD932-546C-4111-964B-31EB3928517B}|Default">
-  <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Models/CountDay.cs">
+  <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Controllers/CountedPeopleController.cs">
     <Files>
-      <File FileName="CounterAPI/Models/CountDay.cs" Line="12" Column="1" />
-      <File FileName="CounterAPI/Models/CountDayContext.cs" Line="7" Column="16" />
-      <File FileName="CounterAPI/Startup.cs" Line="48" Column="102" />
-      <File FileName="CounterAPI/Controllers/CountDayController.cs" Line="20" Column="32" />
+      <File FileName="CounterAPI/Models/CountDay.cs" Line="6" Column="18" />
+      <File FileName="CounterAPI/Models/CountDayContext.cs" Line="14" Column="2" />
+      <File FileName="CounterAPI/Startup.cs" Line="23" Column="43" />
+      <File FileName="CounterAPI/appsettings.json" Line="3" Column="6" />
+      <File FileName="CounterAPI/Controllers/CountDayController.cs" Line="109" Column="3" />
       <File FileName="CounterAPI/Properties/launchSettings.json" Line="24" Column="33" />
+      <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" Line="18" Column="1" />
+      <File FileName="CounterAPI/Services/CountedApi.cs" Line="13" Column="10" />
+      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="12" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterAPI" expanded="True">
             <Node name="CounterAPI" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="CountDay.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CountedPeopleController.cs" selected="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>

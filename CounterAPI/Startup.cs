@@ -9,9 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using CounterAPI.Models;
+using CountedApi.Services;
 
 namespace CounterAPI
 {
@@ -27,7 +28,13 @@ namespace CounterAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CountedPeopleDatabaseSettings>(
+            Configuration.GetSection(nameof(CountedPeopleDatabaseSettings)));
 
+            services.AddSingleton<ICountedPeopleDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<CountedPeopleDatabaseSettings>>().Value);
+
+            services.AddSingleton<CountedService>();
             services.AddControllers();
 
             services.AddDbContext<CountDayContext>(opt =>
