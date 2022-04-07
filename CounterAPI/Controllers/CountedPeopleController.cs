@@ -20,10 +20,10 @@ namespace CountedAPI.Controllers
         public ActionResult<List<CountDay>> Get() =>
             _countedService.Get();
 
-        [HttpGet("{Date}")]
-        public ActionResult<CountDay> Get(string date)
+        [HttpGet("{idDate}")]
+        public ActionResult<CountDay> Get(string idDate)
         {
-            var countedDay = _countedService.Get(date);
+            var countedDay = _countedService.Get(idDate);
 
             if (countedDay == null)
             {
@@ -36,37 +36,40 @@ namespace CountedAPI.Controllers
         [HttpPost]
         public ActionResult<CountDay> Create(CountDay countedDay)
         {
+            if(_countedService.Get(countedDay.IdDate) != null) {
+                return BadRequest();
+            }
             _countedService.Create(countedDay);
 
-            return CreatedAtRoute("GetDay", new { date = countedDay.Date }, countedDay);
+            return CreatedAtRoute(new { idDate = countedDay.IdDate }, countedDay);
         }
 
-        [HttpPut("{date}")]
-        public IActionResult Update(string date, CountDay countedDayIn)
+        [HttpPut("{idDate}")]
+        public IActionResult Update(string idDate, CountDay countedDayIn)
         {
-            var countedDay = _countedService.Get(date);
+            var countedDay = _countedService.Get(idDate);
 
             if (countedDay == null)
             {
                 return NotFound();
             }
 
-            _countedService.Update(date, countedDayIn);
+            _countedService.Update(idDate, countedDayIn);
 
             return NoContent();
         }
 
-        [HttpDelete("{date}")]
-        public IActionResult Delete(string date)
+        [HttpDelete("{idDate}")]
+        public IActionResult Delete(string idDate)
         {
-            var countedDay = _countedService.Get(date);
+            var countedDay = _countedService.Get(idDate);
 
             if (countedDay == null)
             {
                 return NotFound();
             }
 
-            _countedService.Remove(date);
+            _countedService.Remove(idDate);
 
             return NoContent();
         }

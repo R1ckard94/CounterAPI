@@ -6,17 +6,11 @@ namespace CounterAPI.Models
 {
     public class CountDay
     {
-
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-
-        public string Date { get; set; }
+        public string IdDate { get; set; }
 
         public int CurrAmount { get; set; }
 
         public int MaxAmount { get; set; }
-
-        
     }
 }

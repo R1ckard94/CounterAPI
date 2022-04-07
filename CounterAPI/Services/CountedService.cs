@@ -2,6 +2,7 @@
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace CounterAPI.Services
 {
@@ -20,22 +21,24 @@ namespace CounterAPI.Services
         public List<CountDay> Get() =>
             _countedDay.Find(counted => true).ToList();
 
-        public CountDay Get(string date) =>
-            _countedDay.Find(counted => counted.Date.Equals(date)).FirstOrDefault();
+        public CountDay Get(string idDate) =>
+            _countedDay.Find(counted => counted.IdDate == idDate).FirstOrDefault();
 
-        public CountDay Create(CountDay count) 
+        public CountDay Create(CountDay count)
         {
+
             _countedDay.InsertOne(count);
             return count;
+   
         }
 
-        public void Update(string date, CountDay countedIn) =>
-            _countedDay.ReplaceOne(counted => counted.Date.Equals(date), countedIn);
+        public void Update(string idDate, CountDay countedIn) =>
+            _countedDay.ReplaceOne(counted => counted.IdDate == idDate, countedIn);
 
         public void Remove(CountDay countedIn) =>
-            _countedDay.DeleteOne(counted => counted.Id == countedIn.Id);
+            _countedDay.DeleteOne(counted => counted.IdDate == countedIn.IdDate);
 
-        public void Remove(string date) =>
-            _countedDay.DeleteOne(counted => counted.Date.Equals(date));
+        public void Remove(string idDate) =>
+            _countedDay.DeleteOne(counted => counted.IdDate == idDate);
     }
 }
