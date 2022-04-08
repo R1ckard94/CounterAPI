@@ -36,6 +36,7 @@ namespace CountedAPI.Controllers
         [HttpPost]
         public ActionResult<CountDay> Create(CountDay countedDay)
         {
+            //if statement to check if ID(date) alrdy exists 
             if(_countedService.Get(countedDay.IdDate) != null) {
                 return BadRequest();
             }
