@@ -15,7 +15,7 @@ namespace CountedAPI.Controllers
         {
             _countedService = countedService;
         }
-
+         
         [HttpGet]
         public ActionResult<List<CountDay>> Get() =>
             _countedService.Get();
