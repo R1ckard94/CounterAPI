@@ -1,25 +1,24 @@
 ﻿<Properties StartupConfiguration="{F4AAD932-546C-4111-964B-31EB3928517B}|Default">
   <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Models/CountDay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Controllers/CountedPeopleController.cs">
     <Files>
-      <File FileName="CounterAPI/Models/CountDay.cs" Line="11" Column="1" />
-      <File FileName="CounterAPI/Startup.cs" />
-      <File FileName="CounterAPI/appsettings.json" />
-      <File FileName="CounterAPI/Properties/launchSettings.json" />
-      <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" />
-      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" />
-      <File FileName="CounterAPI/Controllers/CountDayController.cs" />
-      <File FileName="CounterAPI/Models/CountDayContext.cs" />
+      <File FileName="CounterAPI/Models/CountDay.cs" Line="9" Column="9" />
+      <File FileName="CounterAPI/Startup.cs" Line="14" Column="25" />
+      <File FileName="CounterAPI/appsettings.json" Line="3" Column="6" />
+      <File FileName="CounterAPI/Properties/launchSettings.json" Line="24" Column="32" />
+      <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" Line="6" Column="50" />
+      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="20" Column="15" />
+      <File FileName="CounterAPI/Models/CountDayContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterAPI" expanded="True">
             <Node name="CounterAPI" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="CountDay.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CountedPeopleController.cs" selected="True" />
               </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
             </Node>
