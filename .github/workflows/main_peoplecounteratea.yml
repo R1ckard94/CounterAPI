@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'PeoplecounterAtea'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26A3A254E43A464BB000EE960A3D4202 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5A8B36516C74F83A9C1513B600B4015 }}
           package: .
