@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CountedAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class CountedController : ControllerBase
     {
