@@ -1,25 +1,26 @@
 ﻿<Properties StartupConfiguration="{F4AAD932-546C-4111-964B-31EB3928517B}|Default">
   <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Controllers/CountedPeopleController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Services/CountedService.cs">
     <Files>
       <File FileName="CounterAPI/Models/CountDay.cs" Line="9" Column="9" />
-      <File FileName="CounterAPI/Startup.cs" Line="14" Column="25" />
-      <File FileName="CounterAPI/appsettings.json" Line="3" Column="6" />
-      <File FileName="CounterAPI/Properties/launchSettings.json" Line="24" Column="32" />
-      <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" Line="16" Column="5" />
-      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="8" Column="29" />
+      <File FileName="CounterAPI/Startup.cs" Line="16" Column="1" />
+      <File FileName="CounterAPI/appsettings.json" Line="5" Column="22" />
+      <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" Line="6" Column="43" />
+      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="8" Column="22" />
+      <File FileName="CounterAPI/Models/CountDayContext.cs" Line="1" Column="1" />
+      <File FileName="CounterAPI/Services/CountedService.cs" Line="30" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterAPI" expanded="True">
             <Node name="CounterAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CountedPeopleController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="CountedService.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
