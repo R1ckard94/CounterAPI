@@ -24,8 +24,3 @@ query för att hämta historik, avg och max. dag -> dagar -> veckor
 query för att se när det är som mest folk under dagen.(alla rader på datum för datum och inom en timme när det är mest folk)
 */
 
-/*
-frågor till Frans
-hur jag faktiskt räknar, postion på kamera etc
-vill helst ha +1/-1 struktur
-*/
