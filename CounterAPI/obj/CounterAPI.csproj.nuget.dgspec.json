@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rickard1/Documents/GitHub/CounterAPI/CounterAPI/CounterAPI.csproj": {}
+    "C:\\Users\\Zion\\Documents\\GitHub\\CounterAPI\\CounterAPI\\CounterAPI.csproj": {}
   },
   "projects": {
-    "/Users/rickard1/Documents/GitHub/CounterAPI/CounterAPI/CounterAPI.csproj": {
+    "C:\\Users\\Zion\\Documents\\GitHub\\CounterAPI\\CounterAPI\\CounterAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rickard1/Documents/GitHub/CounterAPI/CounterAPI/CounterAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Zion\\Documents\\GitHub\\CounterAPI\\CounterAPI\\CounterAPI.csproj",
         "projectName": "CounterAPI",
-        "projectPath": "/Users/rickard1/Documents/GitHub/CounterAPI/CounterAPI/CounterAPI.csproj",
-        "packagesPath": "/Users/rickard1/.nuget/packages/",
-        "outputPath": "/Users/rickard1/Documents/GitHub/CounterAPI/CounterAPI/obj/",
+        "projectPath": "C:\\Users\\Zion\\Documents\\GitHub\\CounterAPI\\CounterAPI\\CounterAPI.csproj",
+        "packagesPath": "C:\\Users\\Zion\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Zion\\Documents\\GitHub\\CounterAPI\\CounterAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/rickard1/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Zion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
