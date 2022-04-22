@@ -10,9 +10,9 @@ namespace CounterAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdDate { get; set; }
 
-        public string date_and_time { get; set; }
+        public string Date_and_time { get; set; }
 
-        public bool personIn { get; set; }
+        public bool PersonIn { get; set; }
 
         
     }
