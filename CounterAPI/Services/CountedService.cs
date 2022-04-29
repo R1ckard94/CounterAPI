@@ -21,8 +21,8 @@ namespace CounterAPI.Services
         public List<CountDay> Get() =>
             _countedDay.Find(counted => true).ToList();
 
-        public CountDay Get(string idDate) =>
-            _countedDay.Find(counted => counted.IdDate == idDate).FirstOrDefault();
+        public List<CountDay> Get(string date_and_time) =>
+            _countedDay.Find(counted => counted.date_and_time.Contains(date_and_time)).ToList(); 
 
         public CountDay Create(CountDay count)
         {

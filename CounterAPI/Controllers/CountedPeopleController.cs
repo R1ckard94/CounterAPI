@@ -20,10 +20,10 @@ namespace CountedAPI.Controllers
 		public ActionResult<List<CountDay>> Get() =>
 			_countedService.Get();
 
-		[HttpGet("{idDate}")]
-		public ActionResult<CountDay> Get(string idDate)
+		[HttpGet("{date}")]
+		public ActionResult<List<CountDay>> Get(string date)
 		{
-			var countedDay = _countedService.Get(idDate);
+			var countedDay = _countedService.Get(date);
 
 			if (countedDay == null)
 			{
@@ -31,6 +31,35 @@ namespace CountedAPI.Controllers
 			}
 
 			return countedDay;
+		}
+
+		[HttpGet("{date}/peoplecount")]
+		public ActionResult<PeopleCount> Get(string date, string peoplecount)
+		{
+			
+			int peopleCounted = 0;
+			int maxPeopleCounted = 0;
+			var countedDay = _countedService.Get(date);
+
+			foreach (var day in countedDay) {
+				if(day.personIn == true)
+                {
+					peopleCounted++;
+					maxPeopleCounted++;
+					continue;
+                }
+				peopleCounted--;
+			}
+
+			if (countedDay == null)
+			{
+				return NotFound();
+			}
+			if (peopleCounted < 0) {
+				peopleCounted = 0;
+			}
+
+			return new PeopleCount(peopleCounted, maxPeopleCounted);
 		}
 
 		[HttpPost]

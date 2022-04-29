@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{F4AAD932-546C-4111-964B-31EB3928517B}|Default">
   <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Models/CountDay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Models/PeopleCount.cs">
     <Files>
-      <File FileName="CounterAPI/Models/CountDay.cs" Line="15" Column="22" />
+      <File FileName="CounterAPI/Models/CountDay.cs" Line="18" Column="6" />
       <File FileName="CounterAPI/Startup.cs" Line="1" Column="1" />
       <File FileName="CounterAPI/appsettings.json" Line="16" Column="1" />
       <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" Line="16" Column="6" />
-      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="1" Column="1" />
+      <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" Line="36" Column="31" />
       <File FileName="CounterAPI/Models/CountDayContext.cs" Line="1" Column="1" />
-      <File FileName="CounterAPI/Services/CountedService.cs" Line="22" Column="1" />
+      <File FileName="CounterAPI/Services/CountedService.cs" Line="25" Column="98" />
       <File FileName="CounterAPI/Properties/launchSettings.json" Line="24" Column="21" />
+      <File FileName="CounterAPI/Models/PeopleCount.cs" Line="6" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterAPI" expanded="True">
-            <Node name="CounterAPI" expanded="True" selected="True">
+            <Node name="CounterAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="PeopleCount.cs" selected="True" />
+              </Node>
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />
               </Node>
