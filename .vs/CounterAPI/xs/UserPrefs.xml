@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{F4AAD932-546C-4111-964B-31EB3928517B}|Default">
   <MonoDevelop.Ide.ItemProperties.CounterAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterAPI/Startup.cs">
     <Files>
       <File FileName="CounterAPI/Models/CountDay.cs" Line="13" Column="9" />
-      <File FileName="CounterAPI/Startup.cs" />
+      <File FileName="CounterAPI/Startup.cs" Line="14" Column="24" />
       <File FileName="CounterAPI/appsettings.json" Line="14" Column="22" />
       <File FileName="CounterAPI/Models/CountedPeopleDatabaseSettings.cs" />
       <File FileName="CounterAPI/Controllers/CountedPeopleController.cs" />
@@ -20,7 +20,7 @@
           <Node name="CounterAPI" expanded="True">
             <Node name="CounterAPI" expanded="True">
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
