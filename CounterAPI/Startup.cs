@@ -35,6 +35,7 @@ namespace CounterAPI
                 sp.GetRequiredService<IOptions<CountedPeopleDatabaseSettings>>().Value);
 
             services.AddSingleton<CountedService>();
+            services.AddCors();
             services.AddControllers();
 
             services.AddDbContext<CountDayContext>(opt =>
@@ -59,6 +60,12 @@ namespace CounterAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
 
             app.UseAuthorization();
 

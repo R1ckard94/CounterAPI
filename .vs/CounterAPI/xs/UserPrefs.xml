@@ -13,13 +13,15 @@
       <File FileName="CounterAPI/Models/PeopleCount.cs" />
       <File FileName="CounterAPI/Program.cs" />
       <File FileName="CounterAPI/Properties/PublishProfiles/PeopleCounterAPI - Web Deploy.pubxml" />
-      <File FileName="CounterAPI/appsettings.Development.json" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterAPI" expanded="True">
-            <Node name="CounterAPI" expanded="True" selected="True" />
+            <Node name="CounterAPI" expanded="True">
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
