@@ -48,16 +48,17 @@ namespace CountedAPI.Controllers
 					maxPeopleCounted++;
 					continue;
                 }
-				peopleCounted--;
+				if (peopleCounted > 0) { //så vi inte har minus i programmet
+					peopleCounted--;
+				}
+				
 			}
 
 			if (countedDay == null)
 			{
 				return NotFound();
 			}
-			if (peopleCounted < 0) {
-				peopleCounted = 0;
-			}
+
 
 			return new PeopleCount(peopleCounted, maxPeopleCounted);
 		}
