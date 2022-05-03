@@ -34,12 +34,17 @@ namespace CountedAPI.Controllers
 		}
 
 		[HttpGet("{date}/peoplecount")]
-		public ActionResult<PeopleCount> Get(string date, string peoplecount)
+		public ActionResult<PeopleCount> GetPeopleCount(string date)
 		{
 			
 			int peopleCounted = 0;
 			int maxPeopleCounted = 0;
 			var countedDay = _countedService.Get(date);
+
+			if (countedDay == null)
+			{
+				return NotFound();
+			}
 
 			foreach (var day in countedDay) {
 				if(day.personIn == true)
@@ -54,13 +59,48 @@ namespace CountedAPI.Controllers
 				
 			}
 
+			
+
+
+			return new PeopleCount(peopleCounted, maxPeopleCounted);
+		}
+
+		[HttpGet("{date}/details")]
+		public ActionResult<PeopleCount> GetDetails(string date)
+		{
+
+			int peopleCounted = 0;
+			int maxPeopleCounted = 0;
+			double time = 06.00;
+			int[] array = new int[15];
+			int arrCount = 0;
+			var countedDay = _countedService.Get(date);
+
 			if (countedDay == null)
 			{
 				return NotFound();
 			}
 
+			foreach(var timestamp in countedDay) 
+            {
+				if (time > 20.00) { 
+					break;
+				}
+                if (timestamp.date_and_time.Contains(time.ToString()))
+                {
+					if (timestamp.personIn == true) {
+						peopleCounted++;
+					}
+					if (timestamp.personIn == false && peopleCounted > 0) {
+						peopleCounted--;
+					}
+                }
+				array[arrCount] = peopleCounted;
+				arrCount++;
+				time += 1.00;
+            }
 
-			return new PeopleCount(peopleCounted, maxPeopleCounted);
+			return new PeopleCount(peopleCounted, maxPeopleCounted, array);
 		}
 
 		[HttpPost]
