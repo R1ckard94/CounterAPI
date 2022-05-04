@@ -104,7 +104,10 @@ namespace CountedAPI.Controllers
 				arrCount++;
 				time += 1;
             }
-
+			if(countedDay.Count == 0)
+            {
+				array = null;
+            }
 			return new PeopleCount(peopleCounted, maxPeopleCounted, array);
 		}
 
