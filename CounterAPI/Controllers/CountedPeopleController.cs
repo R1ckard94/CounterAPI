@@ -71,7 +71,7 @@ namespace CountedAPI.Controllers
 
 			int peopleCounted = 0;
 			int maxPeopleCounted = 0;
-			double time = 06.00;
+			int time = 6;
 			int[] array = new int[15];
 			int arrCount = 0;
 			var countedDay = _countedService.Get(date);
@@ -81,23 +81,28 @@ namespace CountedAPI.Controllers
 				return NotFound();
 			}
 
-			foreach(var timestamp in countedDay) 
+			for(var index = 0; index < countedDay.Count; ) 
             {
-				if (time > 20.00) { 
+				if (time > 20) { 
 					break;
 				}
-                if (timestamp.date_and_time.Contains(time.ToString()))
+                while (countedDay[index].date_and_time.Contains(" " + (time < 10 ? "0"+time.ToString() : time.ToString()) + ":"))
                 {
-					if (timestamp.personIn == true) {
+					if (countedDay[index].personIn == true) {
 						peopleCounted++;
 					}
-					if (timestamp.personIn == false && peopleCounted > 0) {
+					if (countedDay[index].personIn == false && peopleCounted > 0) {
 						peopleCounted--;
 					}
+					if(index == countedDay.Count-1)
+                    {
+						break;
+                    }
+					index++;
                 }
 				array[arrCount] = peopleCounted;
 				arrCount++;
-				time += 1.00;
+				time += 1;
             }
 
 			return new PeopleCount(peopleCounted, maxPeopleCounted, array);
